@@ -17,6 +17,8 @@ public class MovementInput : MonoBehaviour
     public Camera cam;
     public CharacterController controller;
     public bool isGrounded;
+    public float jumpSpeed = 8f;
+    private float gravity = 9.8f;
 
     [Header("Animation Smoothing")]
     [Range(0, 1f)]
@@ -44,15 +46,19 @@ public class MovementInput : MonoBehaviour
     void Update()
     {
         InputMagnitude();
-        
-		isGrounded = controller.isGrounded;
+
+        isGrounded = controller.isGrounded;
 		if (isGrounded) {
-			verticalVel -= 0;
-		} else {
-			verticalVel -= 0.5f;
+			verticalVel = 0;
 		}
-		moveVector = new Vector3 (0, verticalVel, 0);
-		controller.Move (moveVector);
+        if (Input.GetKeyDown("space"))
+        { 
+            verticalVel = jumpSpeed;
+        }
+        verticalVel -= gravity * Time.deltaTime;
+        moveVector.y = verticalVel;
+        moveVector = new Vector3 (0, verticalVel, 0);
+		controller.Move (moveVector * Time.deltaTime);
 
     }
 
@@ -67,6 +73,7 @@ public class MovementInput : MonoBehaviour
 
         forward.y = 0f;
         right.y = 0f;
+        
 
         forward.Normalize();
         right.Normalize();
@@ -97,12 +104,10 @@ public class MovementInput : MonoBehaviour
 
     void InputMagnitude()
     {
-        //Calculate Input Vectors
         InputX = Input.GetAxis("Horizontal");
         InputZ = Input.GetAxis("Vertical");
         Speed = new Vector2(InputX, InputZ).sqrMagnitude;
 
-        //Physically move player
         if (Speed > allowPlayerRotation)
         {
             anim.SetFloat ("InputMagnitude", Speed, StartAnimTime, Time.deltaTime);
