@@ -53,8 +53,6 @@ public class ThrowController : MonoBehaviour
 
     void Update()
     {
-
-        //If aiming rotate the player towards the camera foward, if not reset the camera rotation on the x axis
         if (aiming)
         {
             input.RotateToCamera(transform);
@@ -63,8 +61,6 @@ public class ThrowController : MonoBehaviour
         {
             transform.eulerAngles = new Vector3(Mathf.LerpAngle(transform.eulerAngles.x, 0, .2f), transform.eulerAngles.y, transform.eulerAngles.z);
         }
-
-        //Animation States
         animator.SetBool("pulling", pulling);
         walking = input.Speed > 0;
         animator.SetBool("walking", walking);
@@ -80,6 +76,7 @@ public class ThrowController : MonoBehaviour
             Aim(false, true, 0);
         }
 
+
         if (hasWeapon)
         {
 
@@ -87,14 +84,19 @@ public class ThrowController : MonoBehaviour
             {
                 animator.SetTrigger("throw");
             }
+            if (Input.GetMouseButtonDown(0))
+            {
+                animator.SetTrigger("whack");
+            }
 
         }
         else
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(1))
             {
                 WeaponStartPull();
             }
+
         }
 
         if (pulling)
@@ -126,13 +128,6 @@ public class ThrowController : MonoBehaviour
 
         animator.SetBool("aiming", aiming);
 
-        //UI
-        float fade = state ? 1 : 0;
-
-        if (!changeCamera)
-            return;
-
-        //Camera Offset
         float newAim = state ? cameraZoomOffset : 0;
         float originalAim = !state ? cameraZoomOffset : 0;
 
@@ -171,8 +166,6 @@ public class ThrowController : MonoBehaviour
         weapon.localEulerAngles = origLocRot;
         weapon.localPosition = origLocPos;
         hasWeapon = true;
-
-        //Shake
         impulseSource.GenerateImpulse(Vector3.right);
 
     }

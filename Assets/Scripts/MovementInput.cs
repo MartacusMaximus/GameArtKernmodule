@@ -50,10 +50,17 @@ public class MovementInput : MonoBehaviour
         isGrounded = controller.isGrounded;
 		if (isGrounded) {
 			verticalVel = 0;
-		}
-        if (Input.GetKeyDown("space"))
-        { 
-            verticalVel = jumpSpeed;
+            anim.SetBool("falling", false);
+
+            if (Input.GetKeyDown("space"))
+            {
+                anim.SetTrigger("jump");
+                verticalVel = jumpSpeed;
+            }
+        }
+        else
+        {
+            anim.SetBool("falling", true);
         }
         verticalVel -= gravity * Time.deltaTime;
         moveVector.y = verticalVel;

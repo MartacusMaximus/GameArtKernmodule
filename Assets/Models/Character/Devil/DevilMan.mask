@@ -1,0 +1,213 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DevilMan
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Arms1
+    m_Weight: 1
+  - m_Path: Arms1/ikHandle19
+    m_Weight: 1
+  - m_Path: Arms1/ikHandle25
+    m_Weight: 1
+  - m_Path: BackLegs
+    m_Weight: 1
+  - m_Path: BackLegs/ikHandle1
+    m_Weight: 1
+  - m_Path: BackLegs/ikHandle1/ikHandle6
+    m_Weight: 1
+  - m_Path: BackLegs/ikHandle7
+    m_Weight: 1
+  - m_Path: BackLegs/ikHandle7/ikHandle8
+    m_Weight: 1
+  - m_Path: FrontLegs1
+    m_Weight: 1
+  - m_Path: FrontLegs1/ikHandle3
+    m_Weight: 1
+  - m_Path: FrontLegs1/ikHandle3/ikHandle4
+    m_Weight: 1
+  - m_Path: FrontLegs1/ikHandle11
+    m_Weight: 1
+  - m_Path: FrontLegs1/ikHandle11/ikHandle12
+    m_Weight: 1
+  - m_Path: Head
+    m_Weight: 1
+  - m_Path: Head/ikHandle13
+    m_Weight: 1
+  - m_Path: MidLegs
+    m_Weight: 1
+  - m_Path: MidLegs/ikHandle2
+    m_Weight: 1
+  - m_Path: MidLegs/ikHandle2/ikHandle5
+    m_Weight: 1
+  - m_Path: MidLegs/ikHandle9
+    m_Weight: 1
+  - m_Path: MidLegs/ikHandle9/ikHandle10
+    m_Weight: 1
+  - m_Path: Root
+    m_Weight: 1
+  - m_Path: Root/LeftBackLeg
+    m_Weight: 1
+  - m_Path: Root/LeftBackLeg/LeftBackKnee
+    m_Weight: 1
+  - m_Path: Root/LeftBackLeg/LeftBackKnee/LeftBackKnee1
+    m_Weight: 1
+  - m_Path: Root/LeftBackLeg/LeftBackKnee/LeftBackKnee1/LeftBackAnkle
+    m_Weight: 1
+  - m_Path: Root/LeftBackLeg/LeftBackKnee/LeftBackKnee1/LeftBackAnkle/LeftBackFoot
+    m_Weight: 1
+  - m_Path: Root/LeftFrontLeg
+    m_Weight: 1
+  - m_Path: Root/LeftFrontLeg/LeftFrontKnee
+    m_Weight: 1
+  - m_Path: Root/LeftFrontLeg/LeftFrontKnee/LeftFrontKnee1
+    m_Weight: 1
+  - m_Path: Root/LeftFrontLeg/LeftFrontKnee/LeftFrontKnee1/LeftFrontAnkle
+    m_Weight: 1
+  - m_Path: Root/LeftFrontLeg/LeftFrontKnee/LeftFrontKnee1/LeftFrontAnkle/LeftFrontFoot
+    m_Weight: 1
+  - m_Path: Root/LeftMidLeg
+    m_Weight: 1
+  - m_Path: Root/LeftMidLeg/LeftMidKnee
+    m_Weight: 1
+  - m_Path: Root/LeftMidLeg/LeftMidKnee/LeftMidKnee1
+    m_Weight: 1
+  - m_Path: Root/LeftMidLeg/LeftMidKnee/LeftMidKnee1/LeftMidAnkle
+    m_Weight: 1
+  - m_Path: Root/LeftMidLeg/LeftMidKnee/LeftMidKnee1/LeftMidAnkle/LeftMidFoot
+    m_Weight: 1
+  - m_Path: Root/RightBackLeg
+    m_Weight: 1
+  - m_Path: Root/RightBackLeg/RightBackKnee
+    m_Weight: 1
+  - m_Path: Root/RightBackLeg/RightBackKnee/RightBackKnee1
+    m_Weight: 1
+  - m_Path: Root/RightBackLeg/RightBackKnee/RightBackKnee1/RightBackAnkle
+    m_Weight: 1
+  - m_Path: Root/RightBackLeg/RightBackKnee/RightBackKnee1/RightBackAnkle/RightBackFoot
+    m_Weight: 1
+  - m_Path: Root/RightFrontLeg
+    m_Weight: 1
+  - m_Path: Root/RightFrontLeg/RightFrontKnee
+    m_Weight: 1
+  - m_Path: Root/RightFrontLeg/RightFrontKnee/RightFrontKnee1
+    m_Weight: 1
+  - m_Path: Root/RightFrontLeg/RightFrontKnee/RightFrontKnee1/RightFrontAnkle
+    m_Weight: 1
+  - m_Path: Root/RightFrontLeg/RightFrontKnee/RightFrontKnee1/RightFrontAnkle/RightFrontFoot
+    m_Weight: 1
+  - m_Path: Root/RightMidLeg
+    m_Weight: 1
+  - m_Path: Root/RightMidLeg/RightMidKnee
+    m_Weight: 1
+  - m_Path: Root/RightMidLeg/RightMidKnee/RightMidKnee1
+    m_Weight: 1
+  - m_Path: Root/RightMidLeg/RightMidKnee/RightMidKnee1/RightMidAnkle
+    m_Weight: 1
+  - m_Path: Root/RightMidLeg/RightMidKnee/RightMidKnee1/RightMidAnkle/RightMidFoot
+    m_Weight: 1
+  - m_Path: Root/Spine
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Left_Shoulder
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Left_Shoulder/ikHandle20
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Left_Shoulder/ikHandle21
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Left_Shoulder/ikHandle22
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Left_Shoulder/ikHandle23
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Left_Shoulder/ikHandle24
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Left_Shoulder/LeftElbow
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Left_Shoulder/LeftElbow/LeftHand
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Left_Shoulder/LeftElbow/LeftHand/LeftIndexF
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Left_Shoulder/LeftElbow/LeftHand/LeftIndexF/LeftIndexF1
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Left_Shoulder/LeftElbow/LeftHand/LeftIndexF/LeftIndexF1/LeftIndexF2
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Left_Shoulder/LeftElbow/LeftHand/LeftMiddleF
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Left_Shoulder/LeftElbow/LeftHand/LeftMiddleF/LeftMiddleF1
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Left_Shoulder/LeftElbow/LeftHand/LeftMiddleF/LeftMiddleF1/LeftMiddleF2
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Left_Shoulder/LeftElbow/LeftHand/LeftRingF
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Left_Shoulder/LeftElbow/LeftHand/LeftRingF/LeftRingF1
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Left_Shoulder/LeftElbow/LeftHand/LeftRingF/LeftRingF1/LeftRingF2
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Left_Shoulder/LeftElbow/LeftHand/LeftThumb
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Left_Shoulder/LeftElbow/LeftHand/LeftThumb/LeftThumb1
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Left_Shoulder/LeftElbow/LeftHand/LeftThumb/LeftThumb1/LeftThumb2
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Neck
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Neck/Neck1
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Neck/Neck1/Neck1 1
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Neck/Neck1/Neck1 1/Neck2
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Neck/Neck1/Neck1 1/Neck2/transform1
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Neck/Neck1/Neck1 1/Neck2/transform2
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Neck/Neck1/Neck1 1/Neck2/transform2/joint32
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Right_Shoulder
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Right_Shoulder/ikHandle14
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Right_Shoulder/ikHandle15
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Right_Shoulder/ikHandle16
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Right_Shoulder/ikHandle17
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Right_Shoulder/ikHandle18
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Right_Shoulder/RightElbow
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Right_Shoulder/RightElbow/RightHand
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Right_Shoulder/RightElbow/RightHand/RightIndexF
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Right_Shoulder/RightElbow/RightHand/RightIndexF/RightIndexF1
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Right_Shoulder/RightElbow/RightHand/RightIndexF/RightIndexF1/RightIndexF2
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Right_Shoulder/RightElbow/RightHand/RightMiddleF
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Right_Shoulder/RightElbow/RightHand/RightMiddleF/RightMiddleF2
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Right_Shoulder/RightElbow/RightHand/RightMiddleF/RightMiddleF2/RightMiddleF3
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Right_Shoulder/RightElbow/RightHand/RightRingF
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Right_Shoulder/RightElbow/RightHand/RightRingF/RightRingF1
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Right_Shoulder/RightElbow/RightHand/RightRingF/RightRingF1/RightRingF2
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Right_Shoulder/RightElbow/RightHand/RightThumb
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Right_Shoulder/RightElbow/RightHand/RightThumb/RightThumb1
+    m_Weight: 1
+  - m_Path: Root/Spine/Spine1/Right_Shoulder/RightElbow/RightHand/RightThumb/RightThumb1/RightThumb2
+    m_Weight: 1
