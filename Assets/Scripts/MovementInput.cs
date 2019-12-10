@@ -13,12 +13,18 @@ public class MovementInput : MonoBehaviour
     public float desiredRotationSpeed = 0.1f;
     public Animator anim;
     public float Speed;
+    public float walkSpeed = 3;
+    public float sprintSpeed = 6;
     public float allowPlayerRotation = 0.1f;
     public Camera cam;
     public CharacterController controller;
     public bool isGrounded;
-    public float jumpSpeed = 8f;
-    private float gravity = 9.8f;
+    public float jumpSpeed = 0.2f;
+    public float hyperJump = 2;
+    float powerJump;
+    public float gravity = 1.0f;
+    static float t = 0.0f;
+
 
     [Header("Animation Smoothing")]
     [Range(0, 1f)]
@@ -49,24 +55,35 @@ public class MovementInput : MonoBehaviour
 
         isGrounded = controller.isGrounded;
 		if (isGrounded) {
-			verticalVel = 0;
+            moveVector.y = 0.001f;
             anim.SetBool("falling", false);
 
-            if (Input.GetKeyDown("space"))
+            if (Input.GetKey("space"))
             {
-                anim.SetTrigger("jump");
-                verticalVel = jumpSpeed;
+                anim.SetBool("charging",true); //CHARGE THAT JUMP
+                powerJump = Mathf.Lerp(jumpSpeed, hyperJump, t); //POWER THAT JUMP
+                t += 0.25f * Time.deltaTime;
+            }
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                anim.SetBool("charging", false); //STOP CHARGING WE DONE HERE
+                anim.SetTrigger("jump"); //SUPER JUMP
+                print(powerJump);
+                verticalVel = powerJump;
+                powerJump = jumpSpeed;
+                t = 0.0f;
+
             }
         }
         else
         {
+            verticalVel -= gravity * Time.deltaTime;
             anim.SetBool("falling", true);
         }
-        verticalVel -= gravity * Time.deltaTime;
+
         moveVector.y = verticalVel;
         moveVector = new Vector3 (0, verticalVel, 0);
-		controller.Move (moveVector * Time.deltaTime);
-
+        controller.Move(moveVector);
     }
 
     void PlayerMoveAndRotation()
@@ -86,6 +103,12 @@ public class MovementInput : MonoBehaviour
         right.Normalize();
 
         desiredMoveDirection = forward * InputZ + right * InputX;
+        if (Input.GetKey(KeyCode.LeftShift))
+            Speed = sprintSpeed;
+        else
+            Speed = walkSpeed;
+
+        desiredMoveDirection *= Speed;
 
         if (GetComponent<ThrowController>().aiming)
             return;

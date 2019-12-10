@@ -25,7 +25,6 @@ public class ThrowController : MonoBehaviour
     public Transform curvePoint;
 
     public float throwPower = 30;
-    public float cameraZoomOffset = .3f;
 
     public bool walking = true;
     public bool aiming = false;
@@ -62,7 +61,7 @@ public class ThrowController : MonoBehaviour
             transform.eulerAngles = new Vector3(Mathf.LerpAngle(transform.eulerAngles.x, 0, .2f), transform.eulerAngles.y, transform.eulerAngles.z);
         }
         animator.SetBool("pulling", pulling);
-        walking = input.Speed > 0;
+        walking = input.InputX > 0 || input.InputZ > 0;
         animator.SetBool("walking", walking);
 
 
@@ -128,8 +127,6 @@ public class ThrowController : MonoBehaviour
 
         animator.SetBool("aiming", aiming);
 
-        float newAim = state ? cameraZoomOffset : 0;
-        float originalAim = !state ? cameraZoomOffset : 0;
 
     }
 
