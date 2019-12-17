@@ -17,8 +17,6 @@ public class BreakShit : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collision)
     {
-        print("yes");
-
         if (collision.CompareTag("Breakable"))
         {
 

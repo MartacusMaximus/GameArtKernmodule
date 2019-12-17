@@ -37,8 +37,6 @@ public class PlayerHealth : MonoBehaviour
         {
             currentHealth -= amount;
             barFill = currentHealth / maxHealth;
-            print(barFill);
-
         }
 
         if (currentHealth <= 0)

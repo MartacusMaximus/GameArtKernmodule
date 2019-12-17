@@ -29,12 +29,9 @@ public class WeaponScript : MonoBehaviour
         }
         if (collision.gameObject.layer == 12)
         {
-            print(collision.gameObject.name);
             EnemyAI enemyhealth = collision.gameObject.GetComponent<EnemyAI>();
             if (enemyhealth != null)
             {
-                print(collision.gameObject.name);
-
                 enemyhealth.TakeDamage(swordDamage);
             }
         }

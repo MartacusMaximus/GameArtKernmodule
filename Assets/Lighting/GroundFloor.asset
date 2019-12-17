@@ -16,6 +16,7 @@ MonoBehaviour:
   - {fileID: 114097073143330436}
   - {fileID: 114598871058160044}
   - {fileID: 114641025932039556}
+  - {fileID: 114686028761618464}
 --- !u!114 &114097073143330436
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -33,7 +34,7 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   gradingMode:
-    overrideState: 0
+    overrideState: 1
     value: 1
   externalLut:
     overrideState: 0
@@ -69,25 +70,25 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 1
-    value: -4.4
+    value: -30
   tint:
     overrideState: 1
-    value: 4.4
+    value: 39
   colorFilter:
     overrideState: 1
     value: {r: 1, g: 0.8934943, b: 0.7028302, a: 1}
   hueShift:
     overrideState: 0
-    value: 0
+    value: -25
   saturation:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 22
   brightness:
     overrideState: 0
     value: 0
   postExposure:
     overrideState: 1
-    value: 2.03
+    value: 2.04
   contrast:
     overrideState: 0
     value: 0
@@ -1349,7 +1350,7 @@ MonoBehaviour:
     defaultState: 1
   intensity:
     overrideState: 1
-    value: 0.031
+    value: 0.04
   fastMode:
     overrideState: 0
     value: 0
@@ -1365,7 +1366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 556797029e73b2347956b6579e77e05b, type: 3}
   m_Name: DepthOfField
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
@@ -1381,3 +1382,50 @@ MonoBehaviour:
   kernelSize:
     overrideState: 0
     value: 1
+--- !u!114 &114686028761618464
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a79b01ea5641d4aa6daa2e23605641, type: 3}
+  m_Name: Bloom
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  intensity:
+    overrideState: 1
+    value: 6
+  threshold:
+    overrideState: 0
+    value: 1
+  softKnee:
+    overrideState: 1
+    value: 0.5
+  clamp:
+    overrideState: 0
+    value: 65472
+  diffusion:
+    overrideState: 1
+    value: 3.58
+  anamorphicRatio:
+    overrideState: 0
+    value: 0
+  color:
+    overrideState: 1
+    value: {r: 1, g: 0.7877358, b: 0.7877358, a: 1}
+  fastMode:
+    overrideState: 0
+    value: 0
+  dirtTexture:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+  dirtIntensity:
+    overrideState: 0
+    value: 0
