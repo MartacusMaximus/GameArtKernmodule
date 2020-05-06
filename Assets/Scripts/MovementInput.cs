@@ -44,6 +44,7 @@ public class MovementInput : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        Resources.Load("Sounds");
         anim = this.GetComponent<Animator>();
         cam = Camera.main;
         controller = this.GetComponent<CharacterController>();
