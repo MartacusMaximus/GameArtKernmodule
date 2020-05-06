@@ -8,10 +8,13 @@ public class SceneLoader : MonoBehaviour
 {
     public string levelName;
 
-    private void OnCollisionStay(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        print("Hell");
-        SceneManager.LoadScene(levelName);
+        if (collision.gameObject.tag == "Player")
+        {
+            print("Hell");
+            SceneManager.LoadScene(levelName);
+        }
 
     }
 }

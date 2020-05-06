@@ -21,6 +21,7 @@ public class MovementInput : MonoBehaviour
     public bool isGrounded;
     public float jumpSpeed = 0.2f;
     public float hyperJump = 2;
+    public AudioSource audioS;
     float powerJump;
     public float gravity = 1.0f;
     static float t = 0.0f;
@@ -142,9 +143,14 @@ public class MovementInput : MonoBehaviour
         {
             anim.SetFloat ("InputMagnitude", Speed, StartAnimTime, Time.deltaTime);
             PlayerMoveAndRotation();
+            audioS.enabled = true;
+            audioS.loop = true;
+
         }
         else if (Speed < allowPlayerRotation)
         {
+            audioS.enabled = false;
+            audioS.loop = false;
             anim.SetFloat ("InputMagnitude", Speed, StopAnimTime, Time.deltaTime);
         }
     }

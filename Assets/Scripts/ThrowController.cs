@@ -30,6 +30,9 @@ public class ThrowController : MonoBehaviour
     public bool aiming = false;
     public bool hasWeapon = true;
     public bool pulling = false;
+
+    public AudioSource whoosh;
+
     [Space]
     //Cinemachine Shake
     public CinemachineFreeLook virtualCamera;
@@ -105,6 +108,7 @@ public class ThrowController : MonoBehaviour
             }
             else
             {
+                whoosh.enabled = true;
                 WeaponCatch();
             }
         }

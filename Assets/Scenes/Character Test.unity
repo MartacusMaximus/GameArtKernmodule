@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -180,7 +180,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 26602718}
-  m_LocalRotation: {x: -0.076574154, y: 0.66001606, z: -0.06790762, w: -0.74424714}
+  m_LocalRotation: {x: -0.07339085, y: 0.6933378, z: -0.07133603, w: -0.71330756}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -534,7 +534,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994068888}
-  m_LocalRotation: {x: -0.10807438, y: 0.6187645, z: -0.086478084, w: -0.77328646}
+  m_LocalRotation: {x: -0.10068907, y: 0.67956066, z: -0.09497493, w: -0.7204435}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -759,6 +759,16 @@ PrefabInstance:
       propertyPath: barImage
       value: 
       objectReference: {fileID: 943393229}
+    - target: {fileID: 5080311251109059770, guid: df827159637aded49b939b9754ad02dd,
+        type: 3}
+      propertyPath: deathClip
+      value: 
+      objectReference: {fileID: 8300000, guid: bd9566abdbf08834281bfb4ea8b92a5d, type: 3}
+    - target: {fileID: 5080311251109059770, guid: df827159637aded49b939b9754ad02dd,
+        type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 100012, guid: 5f5e08f64c8423c46ae4bd7e46588425, type: 3}
     - target: {fileID: 7231783372072375343, guid: df827159637aded49b939b9754ad02dd,
         type: 3}
       propertyPath: m_Camera
@@ -1009,7 +1019,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325767024}
-  m_LocalRotation: {x: -0.09006273, y: 0.6586756, z: -0.07987072, w: -0.74273545}
+  m_LocalRotation: {x: -0.086318634, y: 0.69192964, z: -0.083903044, w: -0.7118587}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1289,7 +1299,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649764351}
-  m_LocalRotation: {x: 0.09006319, y: -0.6586756, z: 0.07987021, w: 0.74273545}
+  m_LocalRotation: {x: 0.086319126, y: -0.69192964, z: 0.08390254, w: 0.71185875}
   m_LocalPosition: {x: 4.559826, y: 2.5, z: 0.03979274}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2292,6 +2302,21 @@ PrefabInstance:
       propertyPath: barImage
       value: 
       objectReference: {fileID: 1443979681}
+    - target: {fileID: 6163934290543482469, guid: 0b5453d60a184f44b8d300530e2e6103,
+        type: 3}
+      propertyPath: activated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163934290543482469, guid: 0b5453d60a184f44b8d300530e2e6103,
+        type: 3}
+      propertyPath: rotationSpeed
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163934290543482469, guid: 0b5453d60a184f44b8d300530e2e6103,
+        type: 3}
+      propertyPath: swordDamage
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 6163934290127855819, guid: 0b5453d60a184f44b8d300530e2e6103,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -2371,21 +2396,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mass
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6163934290543482469, guid: 0b5453d60a184f44b8d300530e2e6103,
-        type: 3}
-      propertyPath: activated
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6163934290543482469, guid: 0b5453d60a184f44b8d300530e2e6103,
-        type: 3}
-      propertyPath: rotationSpeed
-      value: 800
-      objectReference: {fileID: 0}
-    - target: {fileID: 6163934290543482469, guid: 0b5453d60a184f44b8d300530e2e6103,
-        type: 3}
-      propertyPath: swordDamage
-      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b5453d60a184f44b8d300530e2e6103, type: 3}

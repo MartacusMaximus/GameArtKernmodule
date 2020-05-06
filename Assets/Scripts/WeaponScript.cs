@@ -6,7 +6,7 @@ public class WeaponScript : MonoBehaviour
 {
     // Start is called before the first frame update
     public bool activated;
-
+    public AudioSource whack;
     public float rotationSpeed;
     public int swordDamage;
 
@@ -25,10 +25,12 @@ public class WeaponScript : MonoBehaviour
 
         if (collision.gameObject.layer == 9)
         {
+            whack.enabled = true;
             collision.gameObject.GetComponentInParent<HingeJoint>().breakForce = 100;
         }
         if (collision.gameObject.layer == 12)
         {
+            whack.enabled = true;
             EnemyAI enemyhealth = collision.gameObject.GetComponent<EnemyAI>();
             if (enemyhealth != null)
             {
@@ -37,6 +39,7 @@ public class WeaponScript : MonoBehaviour
         }
         else 
         {
+            whack.enabled = true;
             GetComponent<Rigidbody>().Sleep();
             GetComponent<Rigidbody>().collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
             GetComponent<Rigidbody>().isKinematic = true;

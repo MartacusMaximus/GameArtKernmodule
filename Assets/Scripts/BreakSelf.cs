@@ -5,7 +5,6 @@ using UnityEngine;
 public class BreakSelf : MonoBehaviour
 {
     public GameObject brokenObject;
-
     public void Break()
     {
         GameObject broken = Instantiate(brokenObject, transform.position, transform.rotation);

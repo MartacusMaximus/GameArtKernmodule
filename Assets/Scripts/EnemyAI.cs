@@ -11,6 +11,7 @@ public class EnemyAI : MonoBehaviour
     public float enemyLookDistance;
     public float attackDistance;
     public float enemyMovementSpeed;
+    public GameObject explosion;
     public Transform fpsTarget;
     public Transform healthBar;
     public Image barImage;
@@ -20,7 +21,7 @@ public class EnemyAI : MonoBehaviour
 
     public float startingHealth;
     private float currentHealth;
-    public AudioClip deathClip;
+    public AudioSource deathClip;
 
     Animator anim;
     AudioSource enemyAudio;
@@ -30,6 +31,7 @@ public class EnemyAI : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        deathClip.enabled = false;
         theRigidbody = GetComponent<Rigidbody>();
         currentHealth = startingHealth;
         barFill = 1.0f;
@@ -108,9 +110,11 @@ public class EnemyAI : MonoBehaviour
     }
     void Death()
     {
+        Instantiate(explosion, transform.position, transform.rotation);
         isDead = true;
+        deathClip.enabled = true;
         print("I am Dead");
-        Destroy(gameObject, 0.5f);
+        Destroy(gameObject, 1.0f);
     }
 
 }

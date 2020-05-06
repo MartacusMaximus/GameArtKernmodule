@@ -24,6 +24,15 @@ ModelImporter:
     400016: //RootNode
     400018: ZBrush_defualt_group
     2100000: defaultMat
+    2100002: Group10Mat
+    2100004: Group2Mat
+    2100006: Group4Mat
+    2100008: Group5Mat
+    2100010: Group6Mat
+    2100012: Group7Mat
+    2100014: Group8Mat
+    2100016: Group9Mat
+    2100018: ZBrush_defualt_groupMat
     2300000: Group10
     2300002: Group2
     2300004: Group4
