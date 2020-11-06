@@ -1238,7 +1238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6163934290706838124}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.116, y: 0.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6163934290706542536}
@@ -2133,9 +2133,10 @@ GameObject:
   - component: {fileID: 7370223439534288286}
   - component: {fileID: 8664418755068795852}
   - component: {fileID: 2484137501036322117}
+  - component: {fileID: 4430602636437030329}
   m_Layer: 0
   m_Name: Sal
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2226,17 +2227,17 @@ MonoBehaviour:
   blockRotationPlayer: 0
   desiredRotationSpeed: 0.1
   anim: {fileID: 6163934290716344748}
-  Speed: 2
-  walkSpeed: 3
-  sprintSpeed: 6
+  Speed: 1
+  walkSpeed: 2
+  sprintSpeed: 3
   allowPlayerRotation: 0.1
   cam: {fileID: 0}
   controller: {fileID: 6163934291234559797}
   isGrounded: 0
-  jumpSpeed: 8
-  hyperJump: 2
+  jumpSpeed: 0.2
+  hyperJump: 1
   audioS: {fileID: 7370223439534288286}
-  gravity: 1
+  gravity: 0.5
   HorizontalAnimSmoothTime: 0.2
   VerticalAnimTime: 0.2
   StartAnimTime: 0.3
@@ -2257,7 +2258,7 @@ MonoBehaviour:
   hand: {fileID: 6163934290706542086}
   spine: {fileID: 6163934290706542130}
   curvePoint: {fileID: 6163934290127855819}
-  throwPower: 30
+  throwPower: 50
   walking: 1
   aiming: 0
   hasWeapon: 1
@@ -2293,7 +2294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4280378fb3e6f0478059a409e863770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 15
+  maxHealth: 100
   barImage: {fileID: 0}
 --- !u!82 &7370223439534288286
 AudioSource:
@@ -2307,13 +2308,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5a9383dda6cabc047b7a297602e93eb4, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.4
+  m_Volume: 0.343
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 85
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -2583,6 +2584,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4430602636437030329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6163934290706838504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4606a1a467b53e8488ac3cf151c3810d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  demonCount: 0
+  demonScore: {fileID: 0}
+  winScreen: {fileID: 0}
+  winText: {fileID: 0}
 --- !u!1 &6163934290706838508
 GameObject:
   m_ObjectHideFlags: 0
@@ -2787,7 +2804,7 @@ MonoBehaviour:
   activated: 0
   whack: {fileID: 6301131136538308636}
   rotationSpeed: 1500
-  swordDamage: 0
+  swordDamage: 20
 --- !u!1001 &6163934290827352863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2889,15 +2906,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ab361ee13062b144bb475c344fa140e6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7a4d09f516c2124891071dab144ecdd, type: 3}
---- !u!4 &6163934290827215247 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400016, guid: f7a4d09f516c2124891071dab144ecdd,
-    type: 3}
-  m_PrefabInstance: {fileID: 6163934290827352863}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6163934290827320751 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100016, guid: f7a4d09f516c2124891071dab144ecdd,
+    type: 3}
+  m_PrefabInstance: {fileID: 6163934290827352863}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6163934290827215247 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400016, guid: f7a4d09f516c2124891071dab144ecdd,
     type: 3}
   m_PrefabInstance: {fileID: 6163934290827352863}
   m_PrefabAsset: {fileID: 0}

@@ -15,6 +15,7 @@ public class EnemyAI : MonoBehaviour
     public Transform fpsTarget;
     public Transform healthBar;
     public Image barImage;
+    public int enemyDamage = 8;
     private float barFill;
 
     Rigidbody theRigidbody;
@@ -77,7 +78,7 @@ public class EnemyAI : MonoBehaviour
             PlayerHealth enemyhealth = enemy.GetComponent<PlayerHealth>();
             if (enemyhealth != null)
             {
-                enemyhealth.TakeDamage(8);
+                enemyhealth.TakeDamage(enemyDamage);
             }
         }
 
